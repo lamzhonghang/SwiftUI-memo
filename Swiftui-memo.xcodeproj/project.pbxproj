@@ -13,6 +13,16 @@
 		3FA317A1274F277D004EBD27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA317A0274F277D004EBD27 /* Preview Assets.xcassets */; };
 		3FA317A3274F277D004EBD27 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317A2274F277D004EBD27 /* Persistence.swift */; };
 		3FA317A6274F277D004EBD27 /* Swiftui_memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317A4274F277D004EBD27 /* Swiftui_memo.xcdatamodeld */; };
+		3FA317AF274F28F7004EBD27 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317AE274F28F7004EBD27 /* TextEditor.swift */; };
+		3FA317B1274F2916004EBD27 /* IdeaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317B0274F2916004EBD27 /* IdeaView.swift */; };
+		3FA317B3274F293F004EBD27 /* IdeaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317B2274F293F004EBD27 /* IdeaDetailView.swift */; };
+		3FA317B5274F2961004EBD27 /* AddIdeaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317B4274F2961004EBD27 /* AddIdeaView.swift */; };
+		3FA317B7274F299D004EBD27 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317B6274F299D004EBD27 /* Tab.swift */; };
+		3FA317B9274F29CE004EBD27 /* binding + optional fallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317B8274F29CE004EBD27 /* binding + optional fallback.swift */; };
+		3FA317BF274F2A0F004EBD27 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317BE274F2A0F004EBD27 /* MemoView.swift */; };
+		3FA317C1274F2A2E004EBD27 /* MemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317C0274F2A2E004EBD27 /* MemoDetailView.swift */; };
+		3FA317C3274F2A58004EBD27 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317C2274F2A58004EBD27 /* AddMemoView.swift */; };
+		3FA317C6274F2DBA004EBD27 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317C5274F2DBA004EBD27 /* NoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +33,16 @@
 		3FA317A0274F277D004EBD27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3FA317A2274F277D004EBD27 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3FA317A5274F277D004EBD27 /* Swiftui_memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swiftui_memo.xcdatamodel; sourceTree = "<group>"; };
+		3FA317AE274F28F7004EBD27 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		3FA317B0274F2916004EBD27 /* IdeaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaView.swift; sourceTree = "<group>"; };
+		3FA317B2274F293F004EBD27 /* IdeaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailView.swift; sourceTree = "<group>"; };
+		3FA317B4274F2961004EBD27 /* AddIdeaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIdeaView.swift; sourceTree = "<group>"; };
+		3FA317B6274F299D004EBD27 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		3FA317B8274F29CE004EBD27 /* binding + optional fallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "binding + optional fallback.swift"; sourceTree = "<group>"; };
+		3FA317BE274F2A0F004EBD27 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		3FA317C0274F2A2E004EBD27 /* MemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailView.swift; sourceTree = "<group>"; };
+		3FA317C2274F2A58004EBD27 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
+		3FA317C5274F2DBA004EBD27 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +75,10 @@
 		3FA31798274F277C004EBD27 /* Swiftui-memo */ = {
 			isa = PBXGroup;
 			children = (
+				3FA317BA274F29D7004EBD27 /* Extension */,
 				3FA31799274F277C004EBD27 /* Swiftui_memoApp.swift */,
 				3FA3179B274F277C004EBD27 /* ContentView.swift */,
+				3FA317BD274F29F7004EBD27 /* View */,
 				3FA3179D274F277D004EBD27 /* Assets.xcassets */,
 				3FA317A2274F277D004EBD27 /* Persistence.swift */,
 				3FA317A4274F277D004EBD27 /* Swiftui_memo.xcdatamodeld */,
@@ -71,6 +93,54 @@
 				3FA317A0274F277D004EBD27 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FA317BA274F29D7004EBD27 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3FA317B6274F299D004EBD27 /* Tab.swift */,
+				3FA317B8274F29CE004EBD27 /* binding + optional fallback.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3FA317BB274F29E3004EBD27 /* Idea */ = {
+			isa = PBXGroup;
+			children = (
+				3FA317B0274F2916004EBD27 /* IdeaView.swift */,
+				3FA317B2274F293F004EBD27 /* IdeaDetailView.swift */,
+				3FA317B4274F2961004EBD27 /* AddIdeaView.swift */,
+			);
+			path = Idea;
+			sourceTree = "<group>";
+		};
+		3FA317BC274F29EF004EBD27 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				3FA317C5274F2DBA004EBD27 /* NoteView.swift */,
+				3FA317AE274F28F7004EBD27 /* TextEditor.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		3FA317BD274F29F7004EBD27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FA317BC274F29EF004EBD27 /* Note */,
+				3FA317BB274F29E3004EBD27 /* Idea */,
+				3FA317C4274F2D3E004EBD27 /* Memo */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FA317C4274F2D3E004EBD27 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				3FA317BE274F2A0F004EBD27 /* MemoView.swift */,
+				3FA317C0274F2A2E004EBD27 /* MemoDetailView.swift */,
+				3FA317C2274F2A58004EBD27 /* AddMemoView.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +213,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA317C3274F2A58004EBD27 /* AddMemoView.swift in Sources */,
+				3FA317B3274F293F004EBD27 /* IdeaDetailView.swift in Sources */,
+				3FA317B1274F2916004EBD27 /* IdeaView.swift in Sources */,
+				3FA317B9274F29CE004EBD27 /* binding + optional fallback.swift in Sources */,
 				3FA317A3274F277D004EBD27 /* Persistence.swift in Sources */,
+				3FA317B5274F2961004EBD27 /* AddIdeaView.swift in Sources */,
+				3FA317AF274F28F7004EBD27 /* TextEditor.swift in Sources */,
 				3FA317A6274F277D004EBD27 /* Swiftui_memo.xcdatamodeld in Sources */,
+				3FA317B7274F299D004EBD27 /* Tab.swift in Sources */,
 				3FA3179C274F277C004EBD27 /* ContentView.swift in Sources */,
+				3FA317C1274F2A2E004EBD27 /* MemoDetailView.swift in Sources */,
+				3FA317BF274F2A0F004EBD27 /* MemoView.swift in Sources */,
+				3FA317C6274F2DBA004EBD27 /* NoteView.swift in Sources */,
 				3FA3179A274F277C004EBD27 /* Swiftui_memoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
