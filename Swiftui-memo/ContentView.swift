@@ -16,7 +16,7 @@ struct ContentView: View {
         case count
     }
     
-    @State private var selection:Tab = .memo
+    @State private var selection:Tab = .note
     
     var body: some View{
         TabView(selection: $selection) {

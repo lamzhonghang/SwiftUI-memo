@@ -15,7 +15,10 @@ struct NoteView: View {
     //read the managed object context right out
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: true)],
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Note.timestamp, ascending: true),
+            NSSortDescriptor(keyPath: \Note.text, ascending: true)
+        ],
         animation: .default)
     // fetch from database
     
@@ -26,7 +29,7 @@ struct NoteView: View {
             List {
                 ForEach(notes) { Note in
                     NavigationLink {
-                        Texteditor()
+                        Texteditor(notes: Note)
                     } label: {
                         VStack(alignment: .leading){
                             Text("Title")

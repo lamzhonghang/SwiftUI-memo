@@ -6,19 +6,49 @@
 //
 
 import SwiftUI
+import HighlightedTextEditor
+
+//let markdownFileURL =
+//    URL(
+//        // swiftlint:disable:next line_length
+//        string: "https://raw.githubusercontent.com/kyle-n/HighlightedTextEditor/main/Tests/Essayist/iOS-EssayistUITests/MarkdownSample.md"
+//    )!
+//let markdown = try! String(contentsOf: markdownFileURL, encoding: .utf8)
 
 struct Texteditor: View {
-    @State private var fullText: String = "This is some editable text..."
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var notes: Note
+    
+    
+    
+//
+//    init() {
+//        let end = markdown.index(of: "## Blockquotes")!
+//        let firstPart = String(markdown.prefix(upTo: end))
+//        _text = State<String>(initialValue: firstPart)
+//    }
+
     var body: some View {
         
-            TextEditor(text: $fullText)
-                .padding()
-    }
-}
+        HighlightedTextEditor(text: self.$notes.text.onNone(""), highlightRules: .markdown2)
+            .frame(maxWidth: 650)
 
-struct Texteditor_Previews: PreviewProvider {
-    static var previews: some View {
-        Texteditor()
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(
+                leading:
+                Button(action : {
+                    try? self.viewContext.save()
+                    self.presentationMode.wrappedValue.dismiss()
+                }){
+                    Image(systemName: "chevron.backward")
+                }
+            )
     }
 }
+//
+//struct Texteditor_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Texteditor(text: "")
+//    }
+//}

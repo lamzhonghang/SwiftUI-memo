@@ -23,6 +23,10 @@
 		3FA317C1274F2A2E004EBD27 /* MemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317C0274F2A2E004EBD27 /* MemoDetailView.swift */; };
 		3FA317C3274F2A58004EBD27 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317C2274F2A58004EBD27 /* AddMemoView.swift */; };
 		3FA317C6274F2DBA004EBD27 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317C5274F2DBA004EBD27 /* NoteView.swift */; };
+		3FA317C9274F5329004EBD27 /* HighlightedTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 3FA317C8274F5329004EBD27 /* HighlightedTextEditor */; };
+		3FA317CB274F5DBB004EBD27 /* MarkDownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317CA274F5DBB004EBD27 /* MarkDownStyle.swift */; };
+		3FA317CD274F6CB4004EBD27 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA317CC274F6CB4004EBD27 /* String.swift */; };
+		3FA317CF274F78E9004EBD27 /* markdown.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FA317CE274F78E9004EBD27 /* markdown.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,9 @@
 		3FA317C0274F2A2E004EBD27 /* MemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailView.swift; sourceTree = "<group>"; };
 		3FA317C2274F2A58004EBD27 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
 		3FA317C5274F2DBA004EBD27 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		3FA317CA274F5DBB004EBD27 /* MarkDownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkDownStyle.swift; sourceTree = "<group>"; };
+		3FA317CC274F6CB4004EBD27 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3FA317CE274F78E9004EBD27 /* markdown.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = markdown.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA317C9274F5329004EBD27 /* HighlightedTextEditor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,7 @@
 				3FA317A2274F277D004EBD27 /* Persistence.swift */,
 				3FA317A4274F277D004EBD27 /* Swiftui_memo.xcdatamodeld */,
 				3FA3179F274F277D004EBD27 /* Preview Content */,
+				3FA317CE274F78E9004EBD27 /* markdown.json */,
 			);
 			path = "Swiftui-memo";
 			sourceTree = "<group>";
@@ -100,6 +109,7 @@
 			children = (
 				3FA317B6274F299D004EBD27 /* Tab.swift */,
 				3FA317B8274F29CE004EBD27 /* binding + optional fallback.swift */,
+				3FA317CC274F6CB4004EBD27 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -119,6 +129,7 @@
 			children = (
 				3FA317C5274F2DBA004EBD27 /* NoteView.swift */,
 				3FA317AE274F28F7004EBD27 /* TextEditor.swift */,
+				3FA317CA274F5DBB004EBD27 /* MarkDownStyle.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -159,6 +170,9 @@
 			dependencies = (
 			);
 			name = "Swiftui-memo";
+			packageProductDependencies = (
+				3FA317C8274F5329004EBD27 /* HighlightedTextEditor */,
+			);
 			productName = "Swiftui-memo";
 			productReference = 3FA31796274F277C004EBD27 /* Swiftui-memo.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +201,9 @@
 				Base,
 			);
 			mainGroup = 3FA3178D274F277C004EBD27;
+			packageReferences = (
+				3FA317C7274F5329004EBD27 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */,
+			);
 			productRefGroup = 3FA31797274F277C004EBD27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA317A1274F277D004EBD27 /* Preview Assets.xcassets in Resources */,
+				3FA317CF274F78E9004EBD27 /* markdown.json in Resources */,
 				3FA3179E274F277D004EBD27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,11 +239,13 @@
 				3FA317B5274F2961004EBD27 /* AddIdeaView.swift in Sources */,
 				3FA317AF274F28F7004EBD27 /* TextEditor.swift in Sources */,
 				3FA317A6274F277D004EBD27 /* Swiftui_memo.xcdatamodeld in Sources */,
+				3FA317CB274F5DBB004EBD27 /* MarkDownStyle.swift in Sources */,
 				3FA317B7274F299D004EBD27 /* Tab.swift in Sources */,
 				3FA3179C274F277C004EBD27 /* ContentView.swift in Sources */,
 				3FA317C1274F2A2E004EBD27 /* MemoDetailView.swift in Sources */,
 				3FA317BF274F2A0F004EBD27 /* MemoView.swift in Sources */,
 				3FA317C6274F2DBA004EBD27 /* NoteView.swift in Sources */,
+				3FA317CD274F6CB4004EBD27 /* String.swift in Sources */,
 				3FA3179A274F277C004EBD27 /* Swiftui_memoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FA317C7274F5329004EBD27 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kyle-n/HighlightedTextEditor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FA317C8274F5329004EBD27 /* HighlightedTextEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FA317C7274F5329004EBD27 /* XCRemoteSwiftPackageReference "HighlightedTextEditor" */;
+			productName = HighlightedTextEditor;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3FA317A4274F277D004EBD27 /* Swiftui_memo.xcdatamodeld */ = {
