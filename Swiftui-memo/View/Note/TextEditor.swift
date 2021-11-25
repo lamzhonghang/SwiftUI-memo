@@ -33,7 +33,9 @@ struct Texteditor: View {
         
         HighlightedTextEditor(text: self.$notes.text.onNone(""), highlightRules: .markdown2)
             .frame(maxWidth: 650)
-
+            .lineSpacing(100)
+            
+        
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
                 leading:

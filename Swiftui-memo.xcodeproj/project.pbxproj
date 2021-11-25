@@ -50,6 +50,7 @@
 		3FA317CA274F5DBB004EBD27 /* MarkDownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkDownStyle.swift; sourceTree = "<group>"; };
 		3FA317CC274F6CB4004EBD27 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3FA317CE274F78E9004EBD27 /* markdown.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = markdown.json; sourceTree = "<group>"; };
+		3FA317D0274FD258004EBD27 /* Swiftui-memo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Swiftui-memo.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		3FA31798274F277C004EBD27 /* Swiftui-memo */ = {
 			isa = PBXGroup;
 			children = (
+				3FA317D0274FD258004EBD27 /* Swiftui-memo.entitlements */,
 				3FA317BA274F29D7004EBD27 /* Extension */,
 				3FA31799274F277C004EBD27 /* Swiftui_memoApp.swift */,
 				3FA3179B274F277C004EBD27 /* ContentView.swift */,
@@ -374,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Swiftui-memo/Swiftui-memo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Swiftui-memo/Preview Content\"";
@@ -392,6 +395,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lan.Swiftui-memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Swiftui-memo/Swiftui-memo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Swiftui-memo/Preview Content\"";
@@ -421,6 +426,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lan.Swiftui-memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

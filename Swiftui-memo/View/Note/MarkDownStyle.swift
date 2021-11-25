@@ -48,6 +48,7 @@ let boldEmphasisTraits: NSFontDescriptor.SymbolicTraits = [.bold, .italic]
 let secondaryBackground = NSColor.windowBackgroundColor
 let lighterColor = NSColor.quaternaryLabelColor
 let textColor = NSColor.labelColor
+
 #else
 let codeFont = UIFont.monospacedSystemFont(ofSize: UIFont.systemFontSize, weight: .thin)
 let headingFont = UIFont.systemFont(ofSize: 36, weight: .bold)
@@ -62,18 +63,30 @@ let lighterColor = UIColor.quaternaryLabel
 let hashTagColor = UIColor.quaternaryLabel
 let blueColor = UIColor.blue
 let textColor = UIColor.label
+
+        
+ 
+
+
 #endif
 
 public extension Sequence where Iterator.Element == HighlightRule {
     static var markdown2: [HighlightRule] {
         [
-            HighlightRule(pattern: inlineCodeRegex, formattingRule: TextFormattingRule(key: .font, value: codeFont)),
-            HighlightRule(pattern: codeBlockRegex, formattingRule: TextFormattingRule(key: .font, value: codeFont)),
+            HighlightRule(pattern: inlineCodeRegex, formattingRules: [
+                TextFormattingRule(key: .font, value: codeFont),
+                TextFormattingRule(key: .foregroundColor, value: blueColor)
+                                                                     ]),
+            HighlightRule(pattern: codeBlockRegex, formattingRules: [
+                TextFormattingRule(key: .font, value: codeFont),
+                TextFormattingRule(key: .foregroundColor, value: blueColor)
+            ]),
             HighlightRule(pattern: hashTag, formattingRules: [
                 TextFormattingRule(fontTraits: headingTraits),
                 TextFormattingRule(key: .kern, value: 0.5),
                 TextFormattingRule(key: .foregroundColor, value: textColor),
-                TextFormattingRule(key: .font, value: headingFont)
+                TextFormattingRule(key: .font, value: headingFont),
+                
                 
             ]),
             HighlightRule(pattern: hash2Tag, formattingRules: [
