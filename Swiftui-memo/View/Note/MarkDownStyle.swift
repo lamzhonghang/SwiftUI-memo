@@ -64,8 +64,9 @@ let hashTagColor = UIColor.quaternaryLabel
 let blueColor = UIColor.blue
 let textColor = UIColor.label
 
-        
- 
+///Dear Alex here：
+//let paragraph = NSMutableParagraphStyle()
+//    paragraph.lineSpacing = 100
 
 
 #endif
@@ -86,7 +87,7 @@ public extension Sequence where Iterator.Element == HighlightRule {
                 TextFormattingRule(key: .kern, value: 0.5),
                 TextFormattingRule(key: .foregroundColor, value: textColor),
                 TextFormattingRule(key: .font, value: headingFont),
-                
+//                TextFormattingRule(key: .paragraphStyle, value: paragraph)
                 
             ]),
             HighlightRule(pattern: hash2Tag, formattingRules: [
