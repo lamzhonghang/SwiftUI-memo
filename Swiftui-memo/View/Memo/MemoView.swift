@@ -34,28 +34,7 @@ struct MemoView: View {
                         ForEach(memos, id: \.self) { memo in
                             Section{
                                 NavigationLink(destination: MemoDetailView(memos: memo)){
-                                    VStack(alignment: .leading, spacing: 8){
-                                        HStack{
-                                            Text(memo.timestamp!, formatter: IdeasFormatter)
-                                                .font(.footnote)
-                                                .foregroundColor(Color(UIColor.tertiaryLabel))
-                                            Spacer()
-                                        }
-                                        Text(memo.title ?? "Title")
-                                            .foregroundColor(.primary)
-                                            .font(.body)
-                                            .multilineTextAlignment(.leading)
-                                        
-                                        HStack{
-                                            Spacer()
-                                            Text(memo.author ?? "lan")
-                                                .font(.subheadline)
-                                                .foregroundColor(Color(UIColor.tertiaryLabel))
-                                        }
-                                    }
-                                    .padding()
-                                    .background(Color(UIColor.secondarySystemGroupedBackground))
-                                    .cornerRadius(12)
+                                    MemoCardView(memos: memo)
                                 }
                                 .buttonStyle(PlainButtonStyle())
                             }
@@ -121,12 +100,7 @@ struct MemoView: View {
     }
 }
 
-private let IdeasFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    //    formatter.timeStyle = .medium
-    return formatter
-}()
+
 
 struct MemoView_Previews: PreviewProvider {
     static var previews: some View {
