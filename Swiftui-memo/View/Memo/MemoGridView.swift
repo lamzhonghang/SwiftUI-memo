@@ -10,6 +10,7 @@ import CoreData
 
 struct MemoGridView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    
     @FetchRequest(
         entity: Memo.entity(),
         sortDescriptors: [
@@ -23,9 +24,8 @@ struct MemoGridView: View {
     private var memos: FetchedResults<Memo>
     @State private var showingAddMemo = false
     @State private var showingMemoDetail = false
-    
-    var columns: [GridItem] =
-            Array(repeating: .init(.flexible()), count: 2)
+    let c = GridItem(.adaptive(minimum: 200, maximum: 400), spacing: 20)
+            
     
     var body: some View {
         NavigationView {
@@ -33,7 +33,7 @@ struct MemoGridView: View {
                 Color(UIColor.systemGroupedBackground)
                     .ignoresSafeArea(.all)
                 ScrollView(showsIndicators: false){
-                    LazyVGrid(columns: columns) {
+                    LazyVGrid(columns: [c], spacing: 20) {
                         ForEach(memos, id: \.self) { memo in
                             Section{
                                 NavigationLink(destination: MemoDetailView(memos: memo)){
@@ -54,6 +54,7 @@ struct MemoGridView: View {
                         }
                         .onDelete(perform: deleteMemos)
                     }
+                    .padding()
                 }
             }
             .navigationTitle("Memo")
@@ -104,9 +105,9 @@ struct MemoGridView: View {
 
 
 
-struct MemoGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemoGridView()
-    }
-}
+//struct MemoGridView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MemoGridView(layout: MemoGridView.GridLayoutSystem)
+//    }
+//}
 
