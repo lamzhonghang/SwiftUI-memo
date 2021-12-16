@@ -1,35 +1,30 @@
 //
-//  NoteView.swift
+//  MemoFolderView.swift
 //  Swiftui-memo
 //
-//  Created by lan on 2021/11/25.
+//  Created by lan on 2021/12/14.
 //
-
 
 import SwiftUI
 import CoreData
 
-struct NoteView: View {
-    
+struct MemoFolderView: View { 
     @Environment(\.managedObjectContext) private var viewContext
-    //read the managed object context right out
     
     @FetchRequest(
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Note.timestamp, ascending: true),
-            NSSortDescriptor(keyPath: \Note.text, ascending: true)
+            NSSortDescriptor(keyPath: \Memo.folder, ascending: true),
         ],
         animation: .default)
-    // fetch from database
     
-    private var notes: FetchedResults<Note>
+    private var memos: FetchedResults<Memo>
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(notes) { Note in
+                ForEach(memos) { Note in
                     NavigationLink {
-                        Texteditor(notes: Note)
+                        MemoGridView()
                     } label: {
                         VStack(alignment: .leading){
                             Text("Title")
@@ -62,6 +57,7 @@ struct NoteView: View {
             let newNote = Note(context: viewContext)
             newNote.timestamp = Date()
             
+            
             do {
                 try viewContext.save()
             } catch {
@@ -74,7 +70,7 @@ struct NoteView: View {
     
     private func deleteNotes(offsets: IndexSet) {
         withAnimation {
-            offsets.map { notes[$0] }.forEach(viewContext.delete)
+            offsets.map { memos[$0] }.forEach(viewContext.delete)
             
             do {
                 try viewContext.save()
@@ -86,7 +82,6 @@ struct NoteView: View {
         }
     }
 }
-
 private let NoteFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
@@ -94,11 +89,8 @@ private let NoteFormatter: DateFormatter = {
     return formatter
 }()
 
-
-
-struct NoteView_Previews: PreviewProvider {
+struct MemoFolderView_Previews: PreviewProvider {
     static var previews: some View {
-        NoteView()
+        MemoFolderView()
     }
 }
-

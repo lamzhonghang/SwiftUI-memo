@@ -24,16 +24,15 @@ struct MemoGridView: View {
     private var memos: FetchedResults<Memo>
     @State private var showingAddMemo = false
     @State private var showingMemoDetail = false
-    let c = GridItem(.adaptive(minimum: 200, maximum: 400), spacing: 20)
-            
-    
+    let column = GridItem(.adaptive(minimum: 250, maximum: 600), spacing: 16)
+
     var body: some View {
         NavigationView {
             ZStack{
                 Color(UIColor.systemGroupedBackground)
                     .ignoresSafeArea(.all)
                 ScrollView(showsIndicators: false){
-                    LazyVGrid(columns: [c], spacing: 20) {
+                    LazyVGrid(columns: [column], spacing: 20) {
                         ForEach(memos, id: \.self) { memo in
                             Section{
                                 NavigationLink(destination: MemoDetailView(memos: memo)){

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F2B47972753604200A7E86F /* MemoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B47962753604200A7E86F /* MemoCardView.swift */; };
+		3F3275C72768802B00064118 /* MemoFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3275C62768802B00064118 /* MemoFolderView.swift */; };
 		3FA126F127536B2800A0DDF0 /* MemoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA126F027536B2800A0DDF0 /* MemoGridView.swift */; };
 		3FA126F327537E3100A0DDF0 /* screenWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA126F227537E3100A0DDF0 /* screenWidth.swift */; };
 		3FA3179A274F277C004EBD27 /* Swiftui_memoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA31799274F277C004EBD27 /* Swiftui_memoApp.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		3F2B47962753604200A7E86F /* MemoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCardView.swift; sourceTree = "<group>"; };
+		3F3275C62768802B00064118 /* MemoFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFolderView.swift; sourceTree = "<group>"; };
 		3FA126F027536B2800A0DDF0 /* MemoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGridView.swift; sourceTree = "<group>"; };
 		3FA126F227537E3100A0DDF0 /* screenWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenWidth.swift; sourceTree = "<group>"; };
 		3FA31796274F277C004EBD27 /* Swiftui-memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiftui-memo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA317BE274F2A0F004EBD27 /* MemoView.swift */,
+				3F3275C62768802B00064118 /* MemoFolderView.swift */,
 				3FA126F027536B2800A0DDF0 /* MemoGridView.swift */,
 				3F2B47962753604200A7E86F /* MemoCardView.swift */,
 				3FA317C0274F2A2E004EBD27 /* MemoDetailView.swift */,
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3275C72768802B00064118 /* MemoFolderView.swift in Sources */,
 				3FA317C3274F2A58004EBD27 /* AddMemoView.swift in Sources */,
 				3FA317B3274F293F004EBD27 /* IdeaDetailView.swift in Sources */,
 				3FA317B1274F2916004EBD27 /* IdeaView.swift in Sources */,

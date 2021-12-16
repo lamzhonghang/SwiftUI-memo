@@ -14,9 +14,14 @@ struct MemoCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8){
             HStack{
-                Text(memos.timestamp!, formatter: IdeasFormatter)
-                    .font(.footnote)
-                    .foregroundColor(Color(UIColor.tertiaryLabel))
+                if let timestamp = memos.timestamp {
+                    Text(timestamp, formatter: IdeasFormatter)
+                        .font(.footnote)
+                        .foregroundColor(Color(UIColor.tertiaryLabel))
+                } else {
+                    Text("--")
+                }
+                
                 Spacer()
             }
             Text(memos.title ?? "Title")
@@ -40,7 +45,7 @@ struct MemoCardView: View {
 private let IdeasFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
-    //    formatter.timeStyle = .medium
+//        formatter.timeStyle = .medium
     return formatter
 }()
 
