@@ -27,7 +27,7 @@ struct ContentView: View {
             }.tag(Tab.note)
                 .environment(\.currentTab, $selection)
             
-            MemoView().tabItem {
+            MemoGridView().tabItem {
                 Image(systemName: "rectangle")
                 Text("memo")
             }.tag(Tab.memo)

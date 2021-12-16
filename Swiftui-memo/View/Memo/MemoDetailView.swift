@@ -51,7 +51,13 @@ struct MemoDetailView: View {
                           message: Text("Are you sure you want to delete this memo?"),
                           primaryButton: .destructive(Text("Delete")) {
                         viewContext.delete(memos)
-                        try? viewContext.save()
+                        do {
+                            try viewContext.save()
+                        } catch {
+                            let nsError = error as NSError
+                            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                        }
+                        
                         self.presentationMode.wrappedValue.dismiss()
                     },
                           secondaryButton: .cancel())

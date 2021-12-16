@@ -14,6 +14,7 @@
     </entity>
     <entity name="Memo" representedClassName="Memo" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="folder" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
@@ -27,7 +28,7 @@
         <element name="Count" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Idea" positionX="-63" positionY="-9" width="128" height="89"/>
         <element name="Item" positionX="-18" positionY="45" width="128" height="44"/>
-        <element name="Memo" positionX="-54" positionY="0" width="128" height="89"/>
+        <element name="Memo" positionX="-54" positionY="0" width="128" height="104"/>
         <element name="Note" positionX="-36" positionY="9" width="128" height="74"/>
     </elements>
 </model>

@@ -8,8 +8,9 @@
 import SwiftUI
 import CoreData
 
-struct MemoView: View {
+struct MemoGridView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    
     @FetchRequest(
         entity: Memo.entity(),
         sortDescriptors: [
@@ -23,14 +24,15 @@ struct MemoView: View {
     private var memos: FetchedResults<Memo>
     @State private var showingAddMemo = false
     @State private var showingMemoDetail = false
-    
+    let column = GridItem(.adaptive(minimum: 250, maximum: 600), spacing: 16)
+
     var body: some View {
         NavigationView {
             ZStack{
                 Color(UIColor.systemGroupedBackground)
                     .ignoresSafeArea(.all)
                 ScrollView(showsIndicators: false){
-                    VStack(spacing: 16){
+                    LazyVGrid(columns: [column], spacing: 20) {
                         ForEach(memos, id: \.self) { memo in
                             Section{
                                 NavigationLink(destination: MemoDetailView(memos: memo)){
@@ -102,9 +104,9 @@ struct MemoView: View {
 
 
 
-struct MemoView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemoView()
-    }
-}
+//struct MemoGridView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MemoGridView(layout: MemoGridView.GridLayoutSystem)
+//    }
+//}
 
